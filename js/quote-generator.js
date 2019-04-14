@@ -18,3 +18,17 @@ function randomize(array, number) {
     randomNumber = Math.floor(Math.random() * ((array[number].length - 1) + 1));
     return randomNumber;
 }
+
+function createSentence(array) {
+    let result = "";
+
+    for (let i = 0; i < array.length; i++) {
+        result += array[i][randomize(array,i)];
+        if (i === 0) {
+            result += " ";
+        }
+    }
+    console.log(result);
+    return result;
+}
+
