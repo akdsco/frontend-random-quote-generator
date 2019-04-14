@@ -1,0 +1,22 @@
+body {
+    background: url("../content/main-bg-alt.jpg");
+    background-size: cover;
+}
+
+header {
+    margin: 2.6rem 0 2rem 0;
+}
+
+header h1 {
+    padding-left: 6rem;
+    font-size: 2em;
+}
+
+main {
+    height: 90vh;
+}
+
+body > main > div > div {
+    margin-top: 5rem;
+    min-height: 30vh;
+}
