@@ -20,16 +20,16 @@ function randomize(array, number) {
 }
 
 function createSentence(array) {
-    let result = "";
+    let randomQuote = "";
 
     for (let i = 0; i < array.length; i++) {
-        result += array[i][randomize(array,i)];
+        randomQuote += array[i][randomize(array,i)];
         if (i === 0) {
-            result += " ";
+            randomQuote += " ";
         }
     }
-    console.log(result);
-    return result;
+    console.log(randomQuote);
+    return randomQuote;
 }
 
 function webPageGenerator(type, amount) {
