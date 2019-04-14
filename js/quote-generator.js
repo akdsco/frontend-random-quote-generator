@@ -12,3 +12,9 @@ let lawsQuoteSentences =
         [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance.", "will always land where it can do the most damage."]
     ];
 
+let randomNumber = 0;
+
+function randomize(array, number) {
+    randomNumber = Math.floor(Math.random() * ((array[number].length - 1) + 1));
+    return randomNumber;
+}
