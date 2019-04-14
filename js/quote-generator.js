@@ -32,3 +32,21 @@ function createSentence(array) {
     return result;
 }
 
+function webPageGenerator(type, amount) {
+    let arrayType;
+
+    switch (type) {
+        case "life":
+            arrayType = lifeQuoteSentences;
+            break;
+        case "laws":
+            arrayType = lawsQuoteSentences;
+            break;
+    }
+
+    for (let i = 0; i < amount; i++) {
+        createSentence(arrayType);
+    }
+}
+
+webPageGenerator("laws",5);
