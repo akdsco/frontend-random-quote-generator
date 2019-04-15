@@ -1,3 +1,5 @@
+// Data Section
+
 let lifeQuoteSentences =
     [
         ["Marvelous objects disappear","Love never dies", "Money comes by"],
@@ -12,18 +14,21 @@ let lawsQuoteSentences =
         [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance.", "will always land where it can do the most damage."]
     ];
 
-let randomNumber = 0;
+// Logic Section
 
-function randomize(array, number) {
-    randomNumber = Math.floor(Math.random() * ((array[number].length - 1) + 1));
-    return randomNumber;
+// Function randomNumber generates random number for a chosen inner array
+function randomNumber(array, number) {
+    return Math.floor(Math.random() * ((array[number].length - 1) + 1));
 }
 
-function createSentence(array) {
+// This function uses randomNumber to select different parts of sentence,
+// concatenates them together and returns a random quote
+
+function createQuote(array) {
     let randomQuote = "";
 
     for (let i = 0; i < array.length; i++) {
-        randomQuote += array[i][randomize(array,i)];
+        randomQuote += array[i][randomNumber(array,i)];
         if (i === 0) {
             randomQuote += " ";
         }
@@ -32,7 +37,9 @@ function createSentence(array) {
     return randomQuote;
 }
 
-function webPageGenerator(type, amount) {
+// This function allows to select the type of quote as well as how many
+// different random quotes should be generated
+function generateQuotes(type, amount) {
     let arrayType;
 
     switch (type) {
@@ -45,8 +52,8 @@ function webPageGenerator(type, amount) {
     }
 
     for (let i = 0; i < amount; i++) {
-        createSentence(arrayType);
+        createQuote(arrayType);
     }
 }
 
-webPageGenerator("laws",5);
+generateQuotes("laws",2);
