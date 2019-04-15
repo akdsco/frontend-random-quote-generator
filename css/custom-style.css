@@ -6,8 +6,8 @@ main {
     margin: 2.6rem 0 2rem 0;
 }
 
-main {
-    height: 90vh;
+main h1 {
+    padding-top: 1.5rem;
 }
 
 .container {
@@ -18,5 +18,5 @@ main {
 
 body > main > div > div {
     margin-top: 5rem;
-    min-height: 30vh;
-}
+    min-height: 20vh;
+}u
