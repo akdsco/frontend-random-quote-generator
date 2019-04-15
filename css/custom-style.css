@@ -1,19 +1,19 @@
 body {
-    background: url("../content/main-bg-alt.jpg");
-    background-size: cover;
+    background-color: lightslategray;
 }
 
-header {
+main {
     margin: 2.6rem 0 2rem 0;
-}
-
-header h1 {
-    padding-left: 6rem;
-    font-size: 2em;
 }
 
 main {
     height: 90vh;
+}
+
+.container {
+    background: rgb(250, 250, 250);
+    border-radius: 5px;
+    margin-bottom: 7%;
 }
 
 body > main > div > div {

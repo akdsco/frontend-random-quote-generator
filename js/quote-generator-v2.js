@@ -57,3 +57,7 @@ function generateQuotes(type, amount) {
 }
 
 generateQuotes("laws",2);
+
+
+// Access HTML and change elements according to actions taken on website
+
