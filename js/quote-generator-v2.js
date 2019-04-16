@@ -39,7 +39,7 @@ function createQuote(array) {
 
 // This function allows to select the type of quote as well as how many
 // different random quotes should be generated
-function generateQuotes(type, amount) {
+function generateQuotes(type) {
     let arrayType;
 
     switch (type) {
@@ -50,14 +50,8 @@ function generateQuotes(type, amount) {
             arrayType = lawsQuoteSentences;
             break;
     }
-
-    for (let i = 0; i < amount; i++) {
-        createQuote(arrayType);
-    }
+    return createQuote(arrayType);
 }
-
-generateQuotes("laws",2);
-
 
 // Access HTML and change elements according to actions taken on website
 
@@ -74,6 +68,14 @@ function generateContent() {
     }
 
     // generate new content and input into website
+    let type = document.getElementById("inputQuoteType").valueOf();
+    let amount = document.getElementById("inputQuantity").valueOf();
 
+    for (let i = 0; i < amount; i++) {
+        let pNode = document.createElement("P");                   // Create a <p> node
+        let textNode = document.createTextNode(generateQuotes(type));       // Create a text node
+        pNode.appendChild(textNode);                                        // Append the text to <P>
+        document.getElementById("quotes").appendChild(pNode);     // Append p to parent element
+    }
 
 }
