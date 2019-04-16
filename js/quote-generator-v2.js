@@ -61,3 +61,19 @@ generateQuotes("laws",2);
 
 // Access HTML and change elements according to actions taken on website
 
+function generateContent() {
+
+    // erase existing quotes
+    let myNode = document.getElementById("quotes");
+
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+         if (myNode.firstChild.nodeName === "FORM") {
+             break;
+         }
+    }
+
+    // generate new content and input into website
+
+
+}
