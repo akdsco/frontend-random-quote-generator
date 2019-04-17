@@ -68,8 +68,10 @@ function generateContent() {
     }
 
     // generate new content and input into website
-    let type = document.getElementById("inputQuoteType").valueOf();
-    let amount = document.getElementById("inputQuantity").valueOf();
+    let type = document.getElementById("inputQuoteType").value;
+    console.log(type);
+    let amount = document.getElementById("inputQuantity").value;
+    console.log(amount);
 
     for (let i = 0; i < amount; i++) {
         let pNode = document.createElement("P");                   // Create a <p> node
