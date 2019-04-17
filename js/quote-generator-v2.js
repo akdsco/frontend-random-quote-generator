@@ -14,6 +14,8 @@ let lawsQuoteSentences =
         [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance.", "will always land where it can do the most damage."]
     ];
 
+let authors = [["Mark Twain","Andy Warhol","Michael Jackson","Joe Smith","Joseph Lang","Old Chinese Saying","Anonymous"]];
+
 // Logic Section
 
 // Function randomNumber generates random number for a chosen inner array
@@ -58,26 +60,28 @@ function generateQuotes(type) {
 function generateContent() {
 
     // erase existing quotes
-    let myNode = document.getElementById("quotes");
-
-    while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
-         // if (myNode.firstChild.nodeName === "FORM") {
-         //     break;
-         // }
+    let quotesNode = document.getElementById("quotes");
+    while (quotesNode.firstChild) {
+        quotesNode.removeChild(quotesNode.firstChild);
     }
 
-    // generate new content and input into website
+    // save user input
     let type = document.getElementById("inputQuoteType").value;
-    console.log(type);
     let amount = document.getElementById("inputQuantity").value;
-    console.log(amount);
 
+    // generate content on website
     for (let i = 0; i < amount; i++) {
-        let pNode = document.createElement("P");                   // Create a <p> node
+
+        //generate random quote
+        let pNode = document.createElement("BLOCKQUOTE");          // Create a <BLOCKQUOTE> node
         let textNode = document.createTextNode(generateQuotes(type));       // Create a text node
         pNode.appendChild(textNode);                                        // Append the text to <P>
-        document.getElementById("quotes").appendChild(pNode);     // Append p to parent element
-    }
+        document.getElementById("quotes").appendChild(pNode);     // Append BLOCKQUOTE to parent element
 
+        //generate random author - similar as above
+        let authorNode = document.createElement("P");
+        let authorName = document.createTextNode("- " + authors[0][randomNumber(authors,0)]);
+        authorNode.appendChild(authorName);
+        document.getElementById("quotes").appendChild(authorNode);
+    }
 }
