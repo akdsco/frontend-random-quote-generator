@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="css/custom-style.css">
 
   <!-- JS -->
-  <script src="js/bootstrap.bundle.js"></script>
   <script src="js/quote-generator-v2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -29,35 +30,37 @@
           Whatever the mind of man can conceive and believe, it can achieve.
         </blockquote>
         <p class="mt-5">– Napoleon Hill</p>
+      </div>
+      <div class="col-md-12">
         <form>
           <div class="form-row justify-content-center">
-            <div class="form-group col-md-4 justify-content-center">
+            <div class="form-group col-md-2 justify-content-center">
               <label for="inputQuoteType">Type</label>
               <select id="inputQuoteType" class="form-control">
                 <option selected disabled value>...</option>
-                <option>Life Quotes</option>
-                <option>Business Quotes</option>
+                <option id="lifeQuoteSelected" value="life">Life Quotes</option>
+                <option id="lawQuoteSelected" value="laws">Random Laws</option>
               </select>
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-2">
               <label for="inputQuantity">How many?</label>
               <select id="inputQuantity" class="form-control">
                 <option selected disabled value>...</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
               </select>
             </div>
           </div>
           <div class="form-row justify-content-center">
-            <button class="btn btn-secondary" type="submit" onclick="generateContent()">Generate</button>
+            <button class="btn btn-secondary" type="button" onclick="generateContent()">Generate</button>
           </div>
         </form>
       </div>

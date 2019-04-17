@@ -62,9 +62,9 @@ function generateContent() {
 
     while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
-         if (myNode.firstChild.nodeName === "FORM") {
-             break;
-         }
+         // if (myNode.firstChild.nodeName === "FORM") {
+         //     break;
+         // }
     }
 
     // generate new content and input into website
