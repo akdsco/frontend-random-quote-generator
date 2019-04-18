@@ -15,4 +15,4 @@ I created HTML page that displays random quotes. There's HTML form that allows s
 
 Live preview:
 
-<a target="_blank" href="#">Random Quote Generator</a>
+<a target="_blank" href="http://quote-generator.ostrowski.co/">Random Quote Generator</a>
