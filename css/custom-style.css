@@ -1,6 +1,38 @@
-body {
-    background-color: lightslategray;
+/*body {*/
+/*    background-color: lightslategray;*/
+/*}*/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i');
+blockquote {
+    font-family: 'Lobster Two', cursive;
+    font-size: 2em;
 }
+
+p {
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 400px) {
+    body {
+        background-size: cover;
+        background: url("../content/main-bg.jpg") center;
+    }
+}
+
+body {
+    color: #4e555b;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: url("../content/main-bg.jpg") top;
+}
+
+@media (min-width: 1600px) {
+    body {
+        background-size: cover;
+        background: url("../content/main-bg-big.jpg") center;
+    }
+}
+
 
 main {
     margin: 3% 0 2% 0;
@@ -8,10 +40,11 @@ main {
 
 main h1 {
     padding-top: 1.5rem;
+    font-size: 3.3em;
 }
 
 .container {
-    background: rgb(250, 250, 250);
+    background: rgba(250, 250, 250,.98);
     border-radius: 5px;
     margin-bottom: 5%;
 }
