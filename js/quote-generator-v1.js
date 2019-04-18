@@ -24,10 +24,9 @@ function createQuote(array) {
             randomQuote += " ";
         }
     }
-    console.log(randomQuote);
     return randomQuote;
 }
 
-createQuote(QuoteFragments);
-createQuote(QuoteFragments);
-createQuote(QuoteFragments);
+console.log(createQuote(QuoteFragments));
+console.log(createQuote(QuoteFragments));
+console.log(createQuote(QuoteFragments));
