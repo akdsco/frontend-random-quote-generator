@@ -11,7 +11,7 @@ let lawsQuoteSentences =
     [
         ["Gold's Law:" , "Weinberg's Second Law:" , "Murphy's Fail Law:", "Visionary Law:"],
         ["Often expressed as a relative priority" , "Every solution", "The legibility of a copy", "A falling object"],
-        [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance.", " will always land where it can do the most damage."]
+        [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance." , " will always land where it can do the most damage."]
     ];
 
 let authors = ["Mark Twain","Andy Warhol","Michael Jackson","Joe Smith","Joseph Lang","Old Chinese Saying","Anonymous"];
