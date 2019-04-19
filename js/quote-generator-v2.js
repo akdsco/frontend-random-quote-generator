@@ -11,16 +11,22 @@ let lawsQuoteSentences =
     [
         ["Gold's Law:" , "Weinberg's Second Law:" , "Murphy's Fail Law:", "Visionary Law:"],
         ["Often expressed as a relative priority" , "Every solution", "The legibility of a copy", "A falling object"],
-        [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance.", "will always land where it can do the most damage."]
+        [" is directly proportional to the cost of the item." , " breeds new problems." , " is inversely proportional to its importance.", " will always land where it can do the most damage."]
     ];
 
-let authors = [["Mark Twain","Andy Warhol","Michael Jackson","Joe Smith","Joseph Lang","Old Chinese Saying","Anonymous"]];
+let authors = ["Mark Twain","Andy Warhol","Michael Jackson","Joe Smith","Joseph Lang","Old Chinese Saying","Anonymous"];
 
 // Logic Section
 
-// Function randomNumber generates random number for a chosen inner array
+// Function randomNumber generates random number for a chosen inner array or
+// for a one dimensional array if only array parameter is supplied
 function randomNumber(array, number) {
-    return Math.floor(Math.random() * ((array[number].length - 1) + 1));
+
+    if (typeof number !== "undefined") {
+        return Math.floor(Math.random() * ((array[number].length - 1) + 1));
+    } else {
+        return Math.floor(Math.random() * ((array.length) - 1) + 1);
+    }
 }
 
 // This function uses randomNumber to select different parts of sentence,
@@ -35,12 +41,10 @@ function createQuote(array) {
             randomQuote += " ";
         }
     }
-    console.log(randomQuote);
     return randomQuote;
 }
 
-// This function allows to select the type of quote as well as how many
-// different random quotes should be generated
+// This function selects array that corresponds with supplied type
 function generateQuotes(type) {
     let arrayType;
 
@@ -80,7 +84,7 @@ function generateContent() {
 
         //generate random author - similar as above
         let authorNode = document.createElement("P");
-        let authorName = document.createTextNode("- " + authors[0][randomNumber(authors,0)]);
+        let authorName = document.createTextNode("- " + authors[randomNumber(authors)]);
         authorNode.appendChild(authorName);
         document.getElementById("quotes").appendChild(authorNode);
     }
