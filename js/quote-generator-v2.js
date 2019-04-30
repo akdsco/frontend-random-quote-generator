@@ -31,7 +31,6 @@ function randomNumber(array, number) {
 
 // This function uses randomNumber to select different parts of sentence,
 // concatenates them together and returns a random quote
-
 function createQuote(array) {
     let randomQuote = "";
 
@@ -60,7 +59,6 @@ function generateQuotes(type) {
 }
 
 // Access HTML and change elements according to actions taken on website
-
 function generateContent() {
 
     // erase existing quotes
@@ -77,10 +75,10 @@ function generateContent() {
     for (let i = 0; i < amount; i++) {
 
         //generate random quote
-        let pNode = document.createElement("BLOCKQUOTE");          // Create a <BLOCKQUOTE> node
-        let textNode = document.createTextNode(generateQuotes(type));       // Create a text node
-        pNode.appendChild(textNode);                                        // Append the text to <P>
-        document.getElementById("quotes").appendChild(pNode);     // Append BLOCKQUOTE to parent element
+        let blockquoteNode = document.createElement("BLOCKQUOTE");          // Create a <BLOCKQUOTE> node
+        let textNode = document.createTextNode(generateQuotes(type));                // Create a text node
+        blockquoteNode.appendChild(textNode);                                        // Append the text to <BLOCKQUOTE>
+        document.getElementById("quotes").appendChild(blockquoteNode);     // Append BLOCKQUOTE to parent element
 
         //generate random author - similar as above
         let authorNode = document.createElement("P");
