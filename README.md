@@ -1,18 +1,42 @@
-# Random Quote Generator
+`Imaginary Portfolio Project`
+
+
+[Random Quote Generator](http://quote-generator.ostrowski.co/)
+=======================================
+
+Display random quotes using JavaScript
+
+* * *
 
 ### Request
-Build a random quote generator. The quotes should be randomly constructed by assembling different pieces of a sentence. While creating this program, you have to respect following criteria:
 
-- The quotes are generated randomly one by one with each call
-- Each quote is a combination of at least 3 sentence fragments
-- The quotes should be relatively coherent
-- User can select the number of quotes generated
-- User can choose between 2 types of quote generators
+Build a random quote generator, which will assemble quotes randomly from different pieces of a sentence. 
+While creating this program, you have to respect the following criteria:
+
+- the citations are generated randomly with each call
+- each quote is a combination of at least three sentence fragments
+- they should be relatively coherent
+- user can select the number of quotes generated
+- user can choose between 2 types of quotes
 
 ### Solution
 
-I created HTML page that displays random quotes. There's HTML form that allows selection and button to generate new quotes. User can choose between two different types of quotes. I used HTML DOM to connect form selection with JavaScript. I used JavaScript to create program logic and store data. Generator selects randomly three different parts of a sentence stored in array and creates a random quote.
+I created an HTML page that displays random quotes. There's a form that allows selection. User can choose between 
+ two different types of citations. I used JavaScript to create program logic and store data.
 
-Live preview:
+### Links
 
-<a target="_blank" href="http://quote-generator.ostrowski.co/">Random Quote Generator</a>
+ - [Visit website](http://quote-generator.ostrowski.co/)
+
+### Skills Learned
+
+- design an algorithm to meet a specification
+- implement the JavaScript syntax in a program
+- connect JavaScript and HTML using HTML DOM
+
+### Technology
+
+- HTML5
+- CSS3
+- vanilla JS
+- Git / Github
