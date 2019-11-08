@@ -26,7 +26,7 @@ I created an HTML page that displays random quotes. There's a form that allows s
 
 ### Links
 
- - [Visit website](http://quote-generator.ostrowski.co/)
+ - [Generate Quotes](http://quote-generator.ostrowski.co/)
 
 ### Skills Learned
 
